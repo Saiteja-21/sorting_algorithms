@@ -20,12 +20,23 @@
                     <input id="speed_input" type="range" min="20" max="300" stepDown=10 value=60>
                 </span>
             </div>
-            <div class="buttons">
-                <button type="button" class="selectionSort">Selection Sort</button>
-                <button type="button" class="bubbleSort">Bubble Sort</button>
-                <button type="button" class="insertionSort">Insertion Sort</button>
-                <button type="button" class="quickSort">Quick Sort</button>
-                <button type="button" class="mergeSort">Merge Sort</button>
+            
+            <div class="col gap-2 d-sm-flex">
+                <div class="col gap-2 d-sm-flex" id="selectionSort">
+                    <button type="button" class="btn btn-outline-primary btn-dark btn-block selectionSort">Selection Sort</button>
+                </div>
+                <div class="col gap-2 d-sm-flex" id="bubblesort">
+                    <button type="button" class="btn btn-outline-primary btn-dark btn-block bubblesort">Bubble Sort</button>
+                </div>
+                <div class="col gap-2 d-sm-flex" id="insertionSort">
+                    <button type="button" class="btn btn-outline-primary btn-dark btn-block insertionSort">Insertion Sort</button>
+                </div>
+                <div class="col gap-2 d-sm-flex" id="quickSort">
+                    <button type="button" class="btn btn-outline-primary btn-dark btn-block  quickSort">Quick Sort</button>
+                </div>
+                <div class="col gap-2 d-sm-flex" id="mergeSort">
+                    <button type="button" class="btn btn-outline-primary btn-dark btn-block  mergeSort">Merge Sort</button>
+                </div>
             </div>
         </div>
     </nav>
