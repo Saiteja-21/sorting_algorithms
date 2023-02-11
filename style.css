@@ -37,3 +37,8 @@ nav{
 button{
     width:max-content;
 }
+.childBars{
+    border-left:5px solid yellow;
+    margin:2px;
+
+}
