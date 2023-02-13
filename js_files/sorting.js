@@ -77,34 +77,53 @@ delayElement.addEventListener('input', function(){
 let array = [];
 
 // Call to display bars right when you visit the site
-createNewArray();
+
 
 // To create new array input size of array
 /**
  * Complete this method to create Bars of random heights
  */
-function createNewArray(noOfBars = 60) {
+function createNewArray(noOfBars = 100) {
     // calling helper function to delete old bars from dom
     deleteChild();
 
     // create an array of random numbers 
-    array = [];
+    let array = [];
+    
+    for (let i = 0; i < 101; i++) {
+        let r=Math.floor(Math.random()*100);
+        array.push(r);
+    }
     // select the div #bars element
-    const bars = document.querySelector("#bars");
+    const bars = document.querySelector(".flex-container");
+    //let parent = document.querySelector(".flex-container");
 
     // create multiple element div using loop and adding class 'bar col'
+    
     for (let i = 0; i < noOfBars; i++) {
         //create element
         // update height of bar
         // add appropriate styling class to the element
         // add element to the DOM by appending to the div #bars
+       
+
+        let div_ele = document.createElement('div');
+        div_ele.style.height = `${array[i]*5}px`;
+        bars.appendChild(div_ele);
+    
+         div_ele.classList.add('childBars');
+
     }
-}
+    }
+
 
 // Helper function to delete all the previous bars so that new can be added
 function deleteChild() {
-    const bar = document.querySelector("#bars");
+    const bar = document.querySelector(".flex-container");
+    //let parent = document.querySelector(".flex-container");
     bar.innerHTML = '';
+    //parent.innerHTML="";
+
 }
 
 // Selecting newarray button from DOM and adding eventlistener

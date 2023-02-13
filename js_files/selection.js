@@ -50,25 +50,5 @@ selectionSortbtn.addEventListener('click', async function () {
 });
 
 
-function vertical_bars() {
 
-    let arr_numbers = [];
-    for (let i = 0; i < 101; i++) {
-        let r=Math.floor(Math.random()*100);
-        arr_numbers.push(r);
-    }
-    
-    let parent = document.querySelector(".flex-container");
-    for(let i=0;i<arr_numbers.length;i++){
-        let div_ele = document.createElement('div');
-    div_ele.style.height = `${arr_numbers[i]*5}px`;
-    parent.appendChild(div_ele);
-    
-    div_ele.classList.add('childBars');
-
-    }
-    
-
-    }
-    
 
