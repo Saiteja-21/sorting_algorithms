@@ -4,7 +4,7 @@
 
 async function selection() {
     console.log('In selection()');
-    const ele = document.querySelectorAll(".bar");
+    const ele = document.querySelectorAll(".childBars");
     for (let i = 0; i < ele.length; i++) {
         console.log('In ith loop');
         let min_index = i;
@@ -34,7 +34,7 @@ async function selection() {
         // change the min element index back to normal as it is swapped 
         ele[min_index].style.background = 'cyan';
         // change the sorted elements color to green
-        ele[i].style.background = 'green';
+        ele[i].style.background='green';
     }
 }
 
