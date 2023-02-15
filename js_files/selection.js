@@ -5,6 +5,7 @@
 async function selection() {
     console.log('In selection()');
     const ele = document.querySelectorAll(".childBars");
+    console.log(ele.value);
     for (let i = 0; i < ele.length; i++) {
         console.log('In ith loop');
         let min_index = i;

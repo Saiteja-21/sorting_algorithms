@@ -1,8 +1,9 @@
 // swap function util for sorting algorithms takes input of 2 DOM elements with .style.height feature
-function swap(el1, el2) {
+function swap(el1,el2) {
     console.log('In swap()');
     
-    let temp = el1.style.height;
+    
+   let temp = el1.style.height;
     el1.style.height = el2.style.height;
     el2.style.height = temp;
     
@@ -27,14 +28,14 @@ function enableSortingBtn(){
 }
 
 // Disables size slider used in conjunction with enable, so that we can disable during sorting and enable buttons after it
-function disableSizeSlider(){
-    document.querySelector("#arr_sz").disabled = true;
-}
+// function disableSizeSlider(){
+//     document.querySelector('#size_input').disabled = true;
+// }
 
-// Enables size slider used in conjunction with disable
-function enableSizeSlider(){
-    document.querySelector("#arr_sz").disabled = false;
-}
+// // Enables size slider used in conjunction with disable
+// function enableSizeSlider(){
+//     document.querySelector('#size_input').disabled = false;
+// }
 
 // Disables newArray buttons used in conjunction with enable, so that we can disable during sorting and enable buttons after it
 function disableNewArrayBtn(){
@@ -57,8 +58,20 @@ function waitforme(milisec) {
  * your task is to add event listener to the size slider and create new array using createNewArray(size) function
  */
 // Selecting size slider from DOM
-let arraySize = document.querySelector('#arr_sz');
+let arraySize = document.querySelector('#size_input');
+
+console.log(arraySize.value);
+//let arraySize=document.getElementById('size_input');
+let noOfBars=arraySize.value;
+
 // add Event listener to update the bars on the UI
+arraySize.addEventListener('change', ()=>{createNewArray(document.querySelector('#size_input').value)});
+console.log(noOfBars);
+//function rangefn(val){
+  //  createNewArray(val);
+    //console.log(val);
+//}
+
 
 
 // Default input for waitforme function (260ms)
@@ -75,6 +88,7 @@ delayElement.addEventListener('input', function(){
 
 // Creating array to store randomly generated numbers
 let array = [];
+//createNewArray();
 
 // Call to display bars right when you visit the site
 
@@ -83,19 +97,20 @@ let array = [];
 /**
  * Complete this method to create Bars of random heights
  */
-function createNewArray(noOfBars = 100) {
+function createNewArray(noOfBars=100) {
     // calling helper function to delete old bars from dom
+   
     deleteChild();
 
     // create an array of random numbers 
     let array = [];
     
-    for (let i = 0; i < 101; i++) {
+    for (let i = 0; i <101; i++) {
         let r=Math.floor(Math.random()*100);
         array.push(r);
     }
     // select the div #bars element
-    const bars = document.querySelector(".flex-container");
+    const bars = document.querySelector("#bars");
     //let parent = document.querySelector(".flex-container");
 
     // create multiple element div using loop and adding class 'bar col'
@@ -114,6 +129,7 @@ function createNewArray(noOfBars = 100) {
          div_ele.classList.add('childBars');
 
     }
+    
     }
 
 

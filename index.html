@@ -8,29 +8,35 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
    <link rel="stylesheet" href="style.css"> 
 </head>
+<body class="p-3 mb-2 bg-dark text-white">
 <header>
     <h1 align="center">Sorting Visualizer</h1>
     <nav>
         <div class="row">
             <div class="col gap-2 d-sm-flex" id="newArray">
-                <button  type="button"  onclick="createNewArray();" class="btn btn-outline-success btn-dark newArray">New Array</button>
+                <button  type="button" onclick="createNewArray()"  class="btn btn-outline-success btn-dark newArray">New Array</button>
 
             </div>
+           
+
             <div class="col" id="input">
+                <span id="size">Size
+                    <input id="size_input" type="range" min="5" max="100" step="1" value="60">
+                </span>
                 <span id="speed">Speed
                     <input id="speed_input" type="range" min="20" max="300" stepDown=10 value=60>
                 </span>
             </div>
             
-            <div class="col gap-2 d-sm-flex">
+           <div class="col gap-2 d-sm-flex">
                 <div class="col gap-2 d-sm-flex" id="selectionSort">
-                    <button type="button" onclick="selection()" class="btn btn-outline-primary btn-dark btn-block selectionSort">Selection Sort</button>
+                    <button type="button"  onclick="selection()" class="btn btn-outline-primary btn-dark btn-block selectionSort">Selection Sort</button>
                 </div>
                 <div class="col gap-2 d-sm-flex" id="bubblesort">
-                    <button type="button" onclick="bubble()" class="btn btn-outline-primary btn-dark btn-block bubblesort">Bubble Sort</button>
+                    <button type="button" onclick="bubble()" class="btn btn-outline-primary btn-dark btn-block bubbleSort">Bubble Sort</button>
                 </div>
                 <div class="col gap-2 d-sm-flex" id="insertionSort">
-                    <button type="button" onclick="insertion()" class="btn btn-outline-primary btn-dark btn-block insertionSort">Insertion Sort</button>
+                    <button type="button"  onclick="insertion()" class="btn btn-outline-primary btn-dark btn-block insertionSort">Insertion Sort</button>
                 </div>
                 <div class="col gap-2 d-sm-flex" id="quickSort">
                     <button type="button" class="btn btn-outline-primary btn-dark btn-block  quickSort">Quick Sort</button>
@@ -38,11 +44,11 @@
                 <div class="col gap-2 d-sm-flex" id="mergeSort">
                     <button type="button" class="btn btn-outline-primary btn-dark btn-block  mergeSort">Merge Sort</button>
                 </div>
-            </div>
+           </div>
         </div>
     </nav>
 </header>
-<body class="p-3 mb-2 bg-dark text-white">
+
     
     <div id="bars" class="flex-container"></div>
 
